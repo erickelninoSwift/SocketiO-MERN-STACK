@@ -9,6 +9,7 @@ router.get("/", async (request: Request, response: Response) => {
   });
 });
 
-router.post("/api/message", handleSendMessage);
+// router.post("/api/message", handleSendMessage);
+router.post("/api/message", handleSendMessage());
 
 export default router;
