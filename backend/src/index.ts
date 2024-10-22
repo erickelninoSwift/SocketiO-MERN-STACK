@@ -1,6 +1,6 @@
 import express, { Request, Response } from "express";
 import cors from "cors";
-
+import "./socket";
 const app = express();
 const PORT = 8000;
 app.use(express.json());

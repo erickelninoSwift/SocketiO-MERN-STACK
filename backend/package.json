@@ -1,18 +1,21 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon src/index.ts",
-    "socket": "nodemon src/socket.ts"
+    "socket": "nodemon src/socket.ts",
+    "client": "nodemon src/client"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@types/socket.io": "^3.0.1",
     "express": "^4.21.1",
-    "socket.io": "^4.8.0"
+    "socket.io": "^4.8.0",
+    "socket.io-client": "^4.8.0"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",

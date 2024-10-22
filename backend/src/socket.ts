@@ -1,15 +1,15 @@
 import { Server } from "socket.io";
 
-const io = new Server(5000, {
+const io = new Server(8080, {
   cors: {
     origin: "*",
   },
 });
 
 io.on("connect", (socket) => {
-  console.log(`Connected socket id: ${socket.id}`);
-
+  console.log(`Socket is connected socket id: ${socket.id}`);
+  console.log(socket.rooms);
   io.on("disconnect", () => {
-    console.log(`Socket disconnected socket id  : ${socket.id}`);
+    console.log(`Socket is disconnected`);
   });
 });
