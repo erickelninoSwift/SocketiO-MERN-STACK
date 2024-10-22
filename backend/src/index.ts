@@ -1,5 +1,6 @@
 import express, { Request, Response } from "express";
 import cors from "cors";
+import getmessageRouter from "./routes";
 import "./socket";
 const app = express();
 const PORT = 8000;
@@ -15,9 +16,7 @@ app.use(
   })
 );
 
-app.get("/", (request: express.Request, response: express.Response) => {
-  response.status(200).json("Hello world");
-});
+app.get("/", getmessageRouter);
 app.listen(PORT, () => {
   console.log(`Your server is running on PORT : ${PORT}`);
 });
